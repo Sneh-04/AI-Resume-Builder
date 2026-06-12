@@ -1,0 +1,2 @@
+Replace this with a real screenshot of the app.
+Run the app, take a screenshot, save it as docs/screenshot.png

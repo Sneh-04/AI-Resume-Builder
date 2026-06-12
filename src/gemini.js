@@ -3,8 +3,8 @@
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent`
 
 export async function askGemini(prompt, systemInstruction = null) {
-  const key = import.meta.env.VITE_GEMINI_KEY || 'AIzaSyDaCslhpOVR3kpQaEECA8tKLzcWAk5yKzo'
-  if (!key) throw new Error('NO_KEY')
+  const key = import.meta.env.VITE_GEMINI_KEY
+  if (!key) throw new Error('GEMINI_KEY not configured')
 
   const body = {
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
